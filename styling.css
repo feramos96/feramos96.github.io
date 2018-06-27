@@ -97,7 +97,7 @@ nav .active {
 .topnav .icon {
   display: none;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 	/*nav{
 		border-bottom: 5px solid #072A5E;
 	}*/

@@ -8,7 +8,7 @@ body{
 	margin:0px;
 	padding:0px;
 	font-family: 'Raleway', sans-serif;
-	font-size:20px;
+	font-size:22px;
 	text-align:center;
 	background-color: #fff;/*#d6e3e2;*/
 	color: #124d8c;
@@ -20,6 +20,34 @@ body{
 /*******************************/
 /********* NEW HEADER **********/
 /*******************************/
+
+#pri1{
+	width:60%;
+	float:left;
+}
+
+#pri2{
+	margin:20px 0;
+	float:right;
+	border-radius:50%;
+	width:35%;
+}
+
+@media(max-width:1200px){
+	#pri1{
+		float:none;
+		width:100%;
+	}
+	#pri2{
+		float:none;
+		width:60%;
+		margin:0;
+	}
+}
+
+#fed{
+	clear:both;
+}
 
 #name{
 	font-family: 'Special Elite';
@@ -269,6 +297,7 @@ footer span{
 
 footer p{
 	color:#fff;
+	text-indent:0;
 }
 
 .output{

@@ -559,6 +559,9 @@ a{
 	.warning{
 		display:none;
 	}
+	.delete{
+		display:none;
+	}
 }
 @media(max-width: 800px){
 	iframe{
@@ -566,9 +569,6 @@ a{
 	}
 	.shrink{
 		font-size:15px;
-	}
-	.delete{
-		display:none;
 	}
 }
 

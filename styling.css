@@ -33,6 +33,13 @@ body{
 	width:35%;
 }
 
+.view{
+	text-indent: 0px;
+	text-align: left;
+	margin:20px 0 10px 0;
+	font-size: 15px;
+}
+
 @media(max-width:1200px){
 	#pri1{
 		float:none;
@@ -80,6 +87,10 @@ body{
 .topnav a:hover {
   background-color: #072A5E;
   color: #fff;
+}
+
+.title:hover{
+	color: #072A5E;
 }
 
 nav .active {
@@ -274,8 +285,11 @@ footer{/*
     margin-top: auto;*/
     text-align: center;
     background-color:#124d8c;
+    padding:35px;
+    color:#fff;
+    margin:0;
 }
-
+/*
 footer ul{
 	padding:40px 0;
 	list-style-type: none;
@@ -285,8 +299,8 @@ footer ul{
 
 footer ul li{
 	text-align: center;
-	/*padding-right:200px;*/
-	/*float:left;*/
+	padding-right:200px;
+	float:left;
 	display:inline-block;
 }
 
@@ -299,6 +313,7 @@ footer p{
 	color:#fff;
 	text-indent:0;
 }
+*/
 
 .output{
 	text-align: left;
@@ -641,5 +656,14 @@ a{
 	.container{
 		padding:20px;
 		text-align: center;
+	}
+}
+
+@media(min-width:1400px){
+	#pri1{
+		width:50%;
+	}
+	#pri2{
+		width:45%;
 	}
 }

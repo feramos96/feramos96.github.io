@@ -37,7 +37,7 @@ body{
 	text-indent: 0px;
 	text-align: left;
 	margin:20px 0 10px 0;
-	font-size: 15px;
+	font-size: 75%;
 }
 
 @media(max-width:1200px){
@@ -285,7 +285,7 @@ footer{/*
     margin-top: auto;*/
     text-align: center;
     background-color:#124d8c;
-    padding:35px;
+    padding:45px;
     color:#fff;
     margin:0;
 }
@@ -661,9 +661,9 @@ a{
 
 @media(min-width:1400px){
 	#pri1{
-		width:50%;
+		width:70%;
 	}
 	#pri2{
-		width:45%;
+		width:25%;
 	}
 }

@@ -667,3 +667,12 @@ a{
 		width:25%;
 	}
 }
+
+@media(min-width:1500px){
+	.resize{
+		width:50%;
+	}
+	.container{
+		padding:0 12% 0 12%;
+	}
+}

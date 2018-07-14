@@ -45,9 +45,9 @@ and the <code>BeautifulSoup</code> module
 </pre></div>
 
 <p>At this stage, we have to look for an element in the website's html code that all car listings seem to have. To do this, right click on one of the car ads and select inspect.</p>
-<img class="resize" src="screenshot1.png">
+<img class="resize2" src="screenshot1.png">
 <p>Once you hit inspect, you should see this window pop up which gives you a bird's eye view of the site's html code. This can be done irrespective of the browser you're using.</p>
-<img class="resize" src="screenshot2.png">
+<img class="resize2" src="screenshot2.png">
 <p>Notice that every single car advertisement is embedded in:</p> <div class="highlight"><pre>&lt;div class="listing sponsored js-used-listing" data-current-index="1" data-engine="4-Cylinder Turbo" data-is-spotlight="True" data-listing-id="476071569" data-listing-type="spv_" data-manufacturer="Ford" data-owner-id="553744"&gt;</pre></div> <!--a div that has a class called "listing".--> <p>This is the data-filled container that we will target. In here there's useful data such as the car's price, mileage, transmission type, engine type, door type, and model. </p>
 <!--<p>HTML code:</p>
 <p><code>&lt;div class="listing  js-used-listing"&gt;</code></p>-->

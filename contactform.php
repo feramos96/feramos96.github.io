@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
 	$mailFrom = $_POST['mail'];
 	$message = $_POST['message'];
 
-	$mailTo = 'firamos@uci.edu';
+	$mailTo = 'fram96@yahoo.com';
 	$headers = "From: ".$mailFrom;
 	$txt = "You have received an email from ".$name.".\n\n".$message;
 // No error handling to check if email is legit...

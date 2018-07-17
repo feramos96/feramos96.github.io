@@ -13,10 +13,10 @@ body{
 	background-color: #fff;/*#d6e3e2;*/
 	color: #124d8c;
 }
-
+/*
 *{
 	transition: all ease-in-out 100ms;
-}
+}*/
 /*******************************/
 /********* NEW HEADER **********/
 /*******************************/
@@ -148,6 +148,18 @@ nav .active {
 }
 */
 /*********** END ^^^^^^^ ********/
+.course-pdf{
+	/*text-align: left;*/
+	text-decoration: underline;
+	list-style-position: inside;
+	padding:0;
+	margin:0;
+	/*font-weight: 600;*/
+}
+.course-pdf li:hover{
+	font-weight: 600;
+}
+
 #wrapped{
 	background-color:#d6e3e2;
 }
@@ -162,15 +174,15 @@ p{
 	text-align: left;
 }
 h1{
-	font-size: 30px;
+	font-size: 33px;
 }
 
 h2{
-	font-size: 25px;
+	font-size: 28px;
 }
 
 h3{
-	font-size: 20px;
+	font-size: 23px;
 }
 
 span{

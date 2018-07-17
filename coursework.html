@@ -30,7 +30,8 @@
 		<section id="about">
 			<h1>Statistics 110 Sequence: Applied Statistics</h1>
 			<hr>
-			<span class="delete">$$ Y_{i} = \beta_{0} + \beta_{1i} X_{1i} + \beta_{2} X_{2i} + \cdots + \beta_{ki} X_{ki} + \epsilon_{i} \ ; \epsilon_{i} \sim  N(0,\sigma_{\epsilon}^2) \ ; \sigma_{i}^2 = \sigma_{j}^2 \ \forall \ i \neq j $$</span>
+			<span class="delete">$$ Y_{i} = \beta_{0} + \beta_{1}X_{i} + \epsilon_{i} \ ; \epsilon_{i} \sim  N(0,\sigma_{\epsilon}^2) \ ; \sigma_{i}^2 = \sigma_{j}^2 \ \forall \ i \neq j $$</span>
+			<span class="delete">$95\% \ PI \Rightarrow \hat{Y_{h}} \pm t_{(\frac{\alpha}{2},\ n-2)} \sqrt{\hat{\sigma^{2}}\bigg(1 + \frac{1}{N} + \frac{X_{h}-\overline{X}}{\sum_{i=1}^{N}(X_{i}-\overline{X})^{2}}\bigg)}; \hat{\sigma^{2}} = \frac{(Y_{i}-\beta_{0}-\beta_{1}X_{i})^{2}}{n-2} $</span>
 			<h2>Stats 110</h2>
 			<p>Introduction to statistical methods for analyzing data from experiments and surveys. Methods covered include two-sample procedures, analysis of variance, simple and multiple linear regression.</p>
 			<h2>Stats 111</h2>
@@ -44,7 +45,8 @@
 		<section id="fed">
 			<h1>Statistics 120 Sequence: Mathematical Statistics</h1>
 			<hr> 
-			<span class='delete'>$$f(x) = \frac{\beta^{\alpha}}{\Gamma(\alpha)}x^{\alpha - 1}e^{-\beta x}\,\ where\ x \in (0,\infty)\ ; \alpha , \beta >0\ ; \Gamma(\alpha) = \int_{0}^{\infty}x^{\alpha - 1}e^{-x}dx$$</span>
+			<span class='delete'>$$\gamma (x;\alpha , \beta) = \frac{\beta^{\alpha}}{\Gamma(\alpha)}x^{\alpha - 1}e^{-\beta x}; x \in (0,\infty)\ ; \alpha , \beta >0\ ; \Gamma(\alpha) = \int_{0}^{\infty}x^{\alpha - 1}e^{-x}dx$$</span>
+			<span class="delete">$MLE \Rightarrow L(\beta, \sigma^{2}) = \prod_{i=1}^{N}\frac{1}{\sigma \sqrt{2\pi}} exp\{{\frac{-(Y_{i}-\beta_{0}-\beta_{1}X_{i})^{2}}{2\sigma^{2}}}\}; \hat{\beta_{0}} = \overline{Y} -\hat{\beta_{1}}\overline{X}\ ; \hat{\beta_{1}} = \frac{\sum_{i=1}^{N}(Y_{i} - \overline{Y})(X_{i} - \overline{X})}{\sum_{i=1}^{N}(X_{i} - \overline{X})^{2}}$</span>
 			<h2>Stats 120A</h2>
 			<p>Introduction to basic principles of probability and statistical inference. Axiomatic definition of probability, random variables, probability distributions, expectation.   </p>
 			<h2>Stats 120B</h2>
@@ -94,7 +96,7 @@
 		<section id="viz">
 			<h1>Economics 122A & 122B: Applied Econometrics</h1>
 			<hr>
-			<span class="delete">$ \sum_{i=1}^{N}({Y_{i}}- \overline{Y})^{2} = \sum_{i=1}^{N}(\hat{Y_{i}}- \overline{Y})^{2} + \sum_{i=1}^{N}({Y_{i}}- \hat{{Y_{i}}})^{2}$</span>
+			<span class="delete">$SST = \ SSR + \ SSE \Rightarrow \sum_{i=1}^{N}({Y_{i}}- \overline{Y})^{2} = \sum_{i=1}^{N}(\hat{Y_{i}}- \overline{Y})^{2} + \sum_{i=1}^{N}({Y_{i}}- \hat{{Y_{i}}})^{2}$</span>
 			<h2>Econ 122A</h2>
 			<p>Introduction to econometrics emphasizing practical applications in microeconomics and macroeconomics.</p>
 			<h2>Econ 122B</h2>

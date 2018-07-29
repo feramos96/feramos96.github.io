@@ -10,6 +10,11 @@ url_to_scrape = 'https://www.kbb.com/cars-for-sale/cars/used-cars/ford/mustang/?
 #data = soup.find_all('div',{"class":"listing"})
 
 def json_data_to_scrape(url:str,number_pages:int) -> None:
+
+	"""This function scrapes vehicle data for 2016 Mustang within 500 miles 
+	from 92612 from Kelley Blue Book and then writes it to a csv file."""
+
+	# First, we have to scrape data from the original url
 	r = requests.get(original_url)
 	soup = BeautifulSoup(r.content,'html.parser')
 	data = soup.find_all('div',{"class":"listing"})
@@ -28,6 +33,8 @@ def json_data_to_scrape(url:str,number_pages:int) -> None:
 			else:
 				attribute[i] = attribute[i]
 		outfile.write(attribute[0] + ',' + attribute[1] + ',' + attribute[2] + ',' +  attribute[3] + '\n')
+
+	# Now we have to iterate over other pages starting from the second page
 	for i in range(2,number_pages+1):
 		url_page = url + '&p={}'.format(i)
 		r2 = requests.get(url_page)
@@ -47,6 +54,7 @@ def json_data_to_scrape(url:str,number_pages:int) -> None:
 					attribute[i] = attribute[i]
 			outfile.write(attribute[0] + ',' + attribute[1] + ',' + attribute[2] + ',' +  attribute[3] + '\n')
 	outfile.close()
+	
 json_data_to_scrape(url_to_scrape,20)
 
 ''' 

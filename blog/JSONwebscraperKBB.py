@@ -54,8 +54,8 @@ def json_data_to_scrape(url:str,number_pages:int) -> None:
 					attribute[i] = attribute[i]
 			outfile.write(attribute[0] + ',' + attribute[1] + ',' + attribute[2] + ',' +  attribute[3] + '\n')
 	outfile.close()
-	
-json_data_to_scrape(url_to_scrape,20)
+
+#json_data_to_scrape(url_to_scrape,20)
 
 ''' 
 ----------------- KEYS ------------------------
@@ -129,4 +129,46 @@ def number_of_rows(filename:'str') -> int:
     for line in infile:
         number_of_lines += 1
     return number_of_lines
-print(number_of_rows('KBBjsondata3.csv'))
+#print(number_of_rows('KBBjsondata3.csv'))
+
+
+list1 = [original_url]
+for i in range(2,20):
+	list1.append(url_to_scrape + '&p={}'.format(i))
+print(list1)
+
+def json_data_to_scrape2(url:str,number_pages:int) -> None:
+
+	"""This function scrapes vehicle data for 2016 Mustang within 500 miles 
+	from 92612 from Kelley Blue Book and then writes it to a csv file."""
+	original_url = 'https://www.kbb.com/cars-for-sale/cars/used-cars/ford/mustang/?vehicleid=410716&year=2016&distance=500#survey'
+	url_list = [original_url]
+	outfile = open('KBBjsondata3.csv','w')
+	outfile.write('model,price,mileage,transmission\n')
+	for i in range(2,number_pages+1):
+		url_list.append(url + '&p={}'.format(i))
+	for each_url in url_list:
+		r = requests.get(each_url)
+		soup = BeautifulSoup(r.content,'html.parser')
+		data = soup.find_all('div',{"class":"listing"})
+		for item in data:
+			json_data = json.loads(item.contents[-2].text)
+			model = json_data['name']
+			price = json_data['offers']['price']
+			transmission = json_data['vehicleTransmission']
+			mileage = json_data['mileageFromOdometer']['value']
+			attribute = [model,price,mileage,transmission]
+			for i in range(len(attribute)):
+				if attribute[i] == '':
+					attribute[i] = 'NA'
+				else:
+					attribute[i] = attribute[i]
+			outfile.write(attribute[0] + ',' + attribute[1] + ',' + attribute[2] + ',' +  attribute[3] + '\n')
+	outfile.close()
+
+json_data_to_scrape2(url_to_scrape, 10)
+
+
+
+
+

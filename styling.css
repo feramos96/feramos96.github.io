@@ -276,6 +276,12 @@ hr{
 .resize{
 	width:99%;
 	border:2px solid #d3d3d3;
+	user-drag: none; 
+  	user-select: none;
+  	-moz-user-select: none;
+  	-webkit-user-drag: none;
+  	-webkit-user-select: none;
+  	-ms-user-select: none;
 	/*box-shadow: 0 0 10px 0px rgba(12,3,25,0.9);*/
 	/*width:1000px;
 	height:1295px;

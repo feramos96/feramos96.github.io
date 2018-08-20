@@ -8,6 +8,7 @@
 	<meta name="author" content="Fernando Ramos">
 	<title>Fernando Ramos | Professional Website</title>
 	<link rel=stylesheet href="styling.css">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
 <!--<body id="wrapped">-->
@@ -76,12 +77,12 @@
 	<h2>Contact Me</h2>
 	<hr>
 	<div id="form1">
-		<form>
-			<input type="text" class="message" placeholder="Name" required="">
+		<form action="https://formspree.io/firamos@uci.edu">
+			<input type="text" name="Name" class="message" placeholder="Name" required="">
 			<br>
-			<input type="email" class="message" placeholder="Email Address" required="">
+			<input type="email" name="Email" class="message" placeholder="Email Address" required="">
 			<br>
-			<textarea style="overflow:auto" rows=5 class="message" placeholder="Message" required=""></textarea>
+			<textarea style="overflow:auto" name="Message" rows=5 class="message" placeholder="Message" required=""></textarea>
 			<br>
 			<button id="btn" type="submit">Submit</button>
 		</form>
